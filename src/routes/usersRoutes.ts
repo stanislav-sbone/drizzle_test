@@ -1,13 +1,11 @@
 import { Router, Request, Response } from "express";
-import { authRegister } from "../controller/usersController";
+import { authLogin, authRegister } from "../controller/usersController";
 
 const usersRouter = Router();
 
 usersRouter.post('/register', authRegister);
 
-// usersRouter.post('/user', (req: Request, res: Response) => {
-//   res.json({ message: 'Create user', data: req.body });
-// });
+usersRouter.post('/login', authLogin);
 
 // usersRouter.patch('/user', (req: Request, res: Response) => {
 //   res.json({ message: 'Update user', data: req.body });
