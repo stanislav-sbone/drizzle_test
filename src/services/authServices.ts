@@ -56,7 +56,7 @@ export const registerUser = async (email: string, password: string) => {
       message: 'Успешная авторизация',
       // token,
       user: {
-        userId: user.id,
+        id: user.id,
         email: user.email,
       },
     };
